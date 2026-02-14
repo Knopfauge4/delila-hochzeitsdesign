@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Hochzeits-Blog | Tipps & Inspiration | DELILA Hochzeitsdesign</title>
+    <meta name="description" content="Hochzeits-Inspiration, Planungstipps und Location-Empfehlungen für Ihre Traumhochzeit in Rheinland-Pfalz. Der Blog von DELILA Hochzeitsdesign.">
+    <meta name="keywords" content="Hochzeit Blog, Hochzeitsplanung Tipps, Hochzeit Inspiration, Hochzeit Rheinland-Pfalz">
+    <meta name="author" content="DELILA Hochzeitsdesign">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://delila-hochzeiten.de/blog/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hochzeits-Blog | DELILA Hochzeitsdesign">
+    <meta property="og:description" content="Hochzeits-Inspiration, Planungstipps und Location-Empfehlungen für Ihre Traumhochzeit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delila-hochzeiten.de/blog/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&q=80">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org Blog Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "DELILA Hochzeitsdesign Blog",
+        "description": "Hochzeits-Inspiration, Planungstipps und Location-Empfehlungen",
+        "url": "https://delila-hochzeiten.de/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "DELILA Hochzeitsdesign",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://delila-hochzeiten.de/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        /* Blog Page Specific Styles */
+        .blog-hero {
+            background: linear-gradient(rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.6)),
+                        url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1920&q=80') center/cover no-repeat;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 120px 20px 60px;
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .blog-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            padding: 80px 20px;
+            background: var(--color-cream);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-card-image {
+            transform: scale(1.05);
+        }
+
+        .blog-card-image-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-card-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--color-sage);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card-content {
+            padding: 30px;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: var(--color-taupe);
+            font-size: 0.9rem;
+        }
+
+        .blog-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .blog-card-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card-title a:hover {
+            color: var(--color-sage);
+        }
+
+        .blog-card-excerpt {
+            color: var(--color-taupe);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            transition: gap 0.3s ease;
+        }
+
+        .blog-card-link:hover {
+            gap: 12px;
+        }
+
+        .blog-card-link::after {
+            content: "→";
+        }
+
+        /* Featured Post */
+        .featured-post {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+
+        .featured-post-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .featured-post-image {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+        }
+
+        .featured-post-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--color-charcoal);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+
+        .featured-post-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-charcoal);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .featured-post-excerpt {
+            color: var(--color-taupe);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* Categories */
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .category-tag {
+            padding: 10px 25px;
+            background: white;
+            border: 1px solid var(--color-taupe);
+            border-radius: 25px;
+            color: var(--color-charcoal);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .category-tag:hover,
+        .category-tag.active {
+            background: var(--color-charcoal);
+            border-color: var(--color-charcoal);
+            color: white;
+        }
+
+        /* Newsletter Section */
+        .blog-newsletter {
+            padding: 80px 20px;
+            background: var(--color-charcoal);
+            color: white;
+            text-align: center;
+        }
+
+        .blog-newsletter h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .blog-newsletter p {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 15px 30px;
+            background: var(--color-sage);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #7a8f7a;
+        }
+
+        @media (max-width: 768px) {
+            .featured-post-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-post-image {
+                min-height: 250px;
+            }
+
+            .featured-post-content {
+                padding: 30px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DELILA</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Start</a></li>
+                <li><a href="index.html#leistungen" class="nav-link">Leistungen</a></li>
+                <li><a href="index.html#locations" class="nav-link">Locations</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="preise.html" class="nav-link">Preise</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#kontakt" class="nav-link nav-cta">Anfragen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Hochzeits-Blog</h1>
+            <p>Inspiration, Tipps und Einblicke rund um Ihre Traumhochzeit in Rheinland-Pfalz</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <!-- Categories -->
+            <div class="blog-categories">
+                <a href="#" class="category-tag active">Alle Beiträge</a>
+                <a href="#" class="category-tag">Locations</a>
+                <a href="#" class="category-tag">Planung</a>
+                <a href="#" class="category-tag">Inspiration</a>
+                <a href="#" class="category-tag">Tipps</a>
+            </div>
+
+            <!-- Featured Post -->
+            <article class="featured-post">
+                <div class="featured-post-inner">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
+                         alt="Traumhafte Hochzeitslocations in der Pfalz"
+                         class="featured-post-image"
+                         loading="lazy">
+                    <div class="featured-post-content">
+                        <span class="featured-badge">FEATURED</span>
+                        <h2 class="featured-post-title">Die 10 schönsten Hochzeitslocations in der Pfalz</h2>
+                        <p class="featured-post-excerpt">Von romantischen Weingütern bis hin zu märchenhaften Schlössern – entdecken Sie die traumhaftesten Orte für Ihre Hochzeit in der Pfalz. Ein persönlicher Guide mit Insider-Tipps.</p>
+                        <a href="blog/hochzeitslocations-pfalz.html" class="blog-card-link">Weiterlesen</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-image-container">
+                        <span class="blog-card-category">Planung</span>
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80"
+                             alt="Was kostet ein Hochzeitsplaner"
+                             class="blog-card-image"
+                             loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>📅 Februar 2026</span>
+                            <span>⏱️ 8 Min. Lesezeit</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="blog/was-kostet-hochzeitsplaner.html">Was kostet ein Hochzeitsplaner? Ein ehrlicher Überblick</a>
+                        </h3>
+                        <p class="blog-card-excerpt">Die Investition in professionelle Hochzeitsplanung – was Sie erwarten können und warum es sich lohnt.</p>
+                        <a href="blog/was-kostet-hochzeitsplaner.html" class="blog-card-link">Weiterlesen</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-image-container">
+                        <span class="blog-card-category">Tipps</span>
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80"
+                             alt="Hochzeit planen Checkliste"
+                             class="blog-card-image"
+                             loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>📅 Januar 2026</span>
+                            <span>⏱️ 12 Min. Lesezeit</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="blog/hochzeit-planen-checkliste.html">Die ultimative Hochzeits-Checkliste: 12 Monate bis zum Ja-Wort</a>
+                        </h3>
+                        <p class="blog-card-excerpt">Schritt für Schritt zur perfekt organisierten Hochzeit. Mit kostenloser Download-Checkliste.</p>
+                        <a href="blog/hochzeit-planen-checkliste.html" class="blog-card-link">Weiterlesen</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-image-container">
+                        <span class="blog-card-category">Locations</span>
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80"
+                             alt="Hochzeitslocations Pfalz"
+                             class="blog-card-image"
+                             loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>📅 Dezember 2025</span>
+                            <span>⏱️ 10 Min. Lesezeit</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="blog/hochzeitslocations-pfalz.html">Die 10 schönsten Hochzeitslocations in der Pfalz</a>
+                        </h3>
+                        <p class="blog-card-excerpt">Von romantischen Weingütern bis zu märchenhaften Schlössern – meine persönlichen Favoriten.</p>
+                        <a href="blog/hochzeitslocations-pfalz.html" class="blog-card-link">Weiterlesen</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="blog-newsletter">
+        <div class="container">
+            <h2>Hochzeits-Inspiration direkt in Ihr Postfach</h2>
+            <p>Melden Sie sich für meinen Newsletter an und erhalten Sie exklusive Tipps, Trends und Location-Empfehlungen.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Ihre E-Mail-Adresse" required>
+                <button type="submit">Anmelden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>DELILA</h3>
+                <p>Hochzeitsdesign</p>
+                <p class="footer-tagline">Moderne Hochzeitsplanung in Rheinland-Pfalz</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="index.html#leistungen">Leistungen</a></li>
+                    <li><a href="preise.html">Preise</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontakt</h4>
+                <p>Mainz, Rheinland-Pfalz</p>
+                <p>info@delila-hochzeiten.de</p>
+            </div>
+            <div class="footer-social">
+                <h4>Folgen Sie mir</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Pinterest">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DELILA Hochzeitsdesign. Alle Rechte vorbehalten.</p>
+            <div class="footer-legal">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

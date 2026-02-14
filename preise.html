@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Hochzeitsplanung Preise & Pakete | DELILA Hochzeitsdesign Mainz</title>
+    <meta name="description" content="Transparente Preise für Premium-Hochzeitsplanung in Rheinland-Pfalz. Full-Service ab 3.500€, Teilplanung ab 1.800€, Day-of-Coordination ab 950€. Jetzt Paket wählen!">
+    <meta name="keywords" content="Hochzeitsplaner Kosten, Hochzeitsplanung Preise, Wedding Planner Preise Mainz, Full-Service Hochzeit Kosten">
+    <meta name="author" content="DELILA Hochzeitsdesign">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://delila-hochzeiten.de/preise/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hochzeitsplanung Preise & Pakete | DELILA Hochzeitsdesign">
+    <meta property="og:description" content="Transparente Preise für Premium-Hochzeitsplanung. Full-Service, Teilplanung oder Day-of-Coordination - finden Sie Ihr perfektes Paket.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delila-hochzeiten.de/preise/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Hochzeitsplanung Pakete",
+        "description": "Premium Hochzeitsplanung in Rheinland-Pfalz",
+        "brand": {
+            "@type": "Brand",
+            "name": "DELILA Hochzeitsdesign"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Full-Service Planung",
+                "price": "3500",
+                "priceCurrency": "EUR",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Teilplanung",
+                "price": "1800",
+                "priceCurrency": "EUR",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Day-of-Coordination",
+                "price": "950",
+                "priceCurrency": "EUR",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* Pricing Page Specific Styles */
+        .pricing-hero {
+            background: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)),
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80') center/cover no-repeat;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 120px 20px 60px;
+        }
+
+        .pricing-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .pricing-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .pricing-intro {
+            padding: 80px 20px;
+            text-align: center;
+            background: var(--color-cream);
+        }
+
+        .pricing-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .pricing-packages {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .package-card {
+            background: white;
+            border: 1px solid var(--color-taupe);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .package-card.featured {
+            border: 2px solid var(--color-sage);
+            transform: scale(1.05);
+        }
+
+        .package-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-sage);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .package-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .package-name {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-charcoal);
+            margin-bottom: 10px;
+        }
+
+        .package-tagline {
+            color: var(--color-taupe);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .package-price {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--color-charcoal);
+            margin-bottom: 5px;
+        }
+
+        .package-price span {
+            font-size: 1rem;
+            color: var(--color-taupe);
+        }
+
+        .package-note {
+            font-size: 0.85rem;
+            color: var(--color-taupe);
+            margin-bottom: 30px;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            text-align: left;
+        }
+
+        .package-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-features li::before {
+            content: "✓";
+            color: var(--color-sage);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .package-features li.not-included {
+            color: #999;
+        }
+
+        .package-features li.not-included::before {
+            content: "—";
+            color: #ccc;
+        }
+
+        .package-cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--color-charcoal);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .package-cta:hover {
+            background: var(--color-sage);
+            transform: translateY(-2px);
+        }
+
+        .package-card.featured .package-cta {
+            background: var(--color-sage);
+        }
+
+        .package-card.featured .package-cta:hover {
+            background: var(--color-charcoal);
+        }
+
+        /* Comparison Section */
+        .pricing-comparison {
+            padding: 80px 20px;
+            background: var(--color-cream);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            overflow-x: auto;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .comparison-table th {
+            background: var(--color-charcoal);
+            color: white;
+            font-family: var(--font-heading);
+            font-weight: 500;
+        }
+
+        .comparison-table th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: #fafafa;
+        }
+
+        .check {
+            color: var(--color-sage);
+            font-size: 1.2rem;
+        }
+
+        .cross {
+            color: #ccc;
+        }
+
+        /* Add-ons Section */
+        .pricing-addons {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto 0;
+        }
+
+        .addon-card {
+            background: var(--color-cream);
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .addon-info h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .addon-info p {
+            color: var(--color-taupe);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .addon-price {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-charcoal);
+            white-space: nowrap;
+        }
+
+        /* Process Section */
+        .pricing-process {
+            padding: 80px 20px;
+            background: var(--color-cream);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--color-charcoal);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--color-taupe);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Guarantee Section */
+        .pricing-guarantee {
+            padding: 80px 20px;
+            background: var(--color-charcoal);
+            color: white;
+            text-align: center;
+        }
+
+        .pricing-guarantee h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .pricing-guarantee p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .guarantee-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .guarantee-item span {
+            font-size: 1.5rem;
+        }
+
+        /* CTA Section */
+        .pricing-cta {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+                        url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80') center/cover no-repeat;
+            text-align: center;
+        }
+
+        .pricing-cta h2 {
+            margin-bottom: 20px;
+        }
+
+        .pricing-cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .package-card.featured:hover {
+                transform: translateY(-10px);
+            }
+
+            .guarantee-features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DELILA</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Start</a></li>
+                <li><a href="index.html#leistungen" class="nav-link">Leistungen</a></li>
+                <li><a href="index.html#locations" class="nav-link">Locations</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="preise.html" class="nav-link active">Preise</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="index.html#kontakt" class="nav-link nav-cta">Anfragen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>Preise & Pakete</h1>
+            <p>Transparente Preisgestaltung für Ihre Traumhochzeit. Finden Sie das perfekte Paket für Ihre Bedürfnisse.</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="pricing-intro">
+        <div class="container">
+            <p>Jede Hochzeit ist einzigartig – genau wie meine Betreuung. Meine Pakete sind als Ausgangspunkt gedacht und werden individuell auf Ihre Wünsche angepasst. Im kostenlosen Erstgespräch erstelle ich Ihnen gerne ein maßgeschneidertes Angebot.</p>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="pricing-packages">
+        <div class="container">
+            <h2 class="section-title">Meine Pakete</h2>
+
+            <div class="packages-grid">
+                <!-- Day-of-Coordination -->
+                <div class="package-card">
+                    <div class="package-icon">📋</div>
+                    <h3 class="package-name">Day-of-Coordination</h3>
+                    <p class="package-tagline">Entspannt am großen Tag</p>
+                    <div class="package-price">ab 950€</div>
+                    <p class="package-note">Perfekt wenn Sie selbst planen möchten</p>
+
+                    <ul class="package-features">
+                        <li>Ausführliches Vorgespräch (2 Std.)</li>
+                        <li>Erstellung eines detaillierten Tagesablaufs</li>
+                        <li>Koordination aller Dienstleister am Hochzeitstag</li>
+                        <li>Betreuung am Hochzeitstag (bis zu 12 Std.)</li>
+                        <li>Ansprechpartnerin für alle Gäste & Dienstleister</li>
+                        <li>Notfall-Kit für kleine Pannen</li>
+                        <li class="not-included">Keine Planungsphase-Betreuung</li>
+                        <li class="not-included">Keine Dienstleister-Suche</li>
+                    </ul>
+
+                    <a href="index.html#kontakt" class="package-cta">Jetzt anfragen</a>
+                </div>
+
+                <!-- Teilplanung - Featured -->
+                <div class="package-card featured">
+                    <div class="package-badge">BELIEBTESTE WAHL</div>
+                    <div class="package-icon">💐</div>
+                    <h3 class="package-name">Teilplanung</h3>
+                    <p class="package-tagline">Die perfekte Balance</p>
+                    <div class="package-price">ab 1.800€</div>
+                    <p class="package-note">Für Paare die Unterstützung wünschen</p>
+
+                    <ul class="package-features">
+                        <li>Alles aus Day-of-Coordination</li>
+                        <li>Budgetplanung & -kontrolle</li>
+                        <li>Location-Besichtigungen (bis zu 3)</li>
+                        <li>Vermittlung ausgewählter Dienstleister</li>
+                        <li>Vertragsverhandlungen</li>
+                        <li>Monatliche Check-in Meetings</li>
+                        <li>Unbegrenzte E-Mail & WhatsApp Betreuung</li>
+                        <li class="not-included">Keine komplette Konzeptentwicklung</li>
+                    </ul>
+
+                    <a href="index.html#kontakt" class="package-cta">Jetzt anfragen</a>
+                </div>
+
+                <!-- Full-Service -->
+                <div class="package-card">
+                    <div class="package-icon">✨</div>
+                    <h3 class="package-name">Full-Service</h3>
+                    <p class="package-tagline">Rundum-Sorglos-Paket</p>
+                    <div class="package-price">ab 3.500€</div>
+                    <p class="package-note">Die Premium-Lösung für Ihre Traumhochzeit</p>
+
+                    <ul class="package-features">
+                        <li>Alles aus Teilplanung</li>
+                        <li>Komplette Konzeptentwicklung</li>
+                        <li>Moodboard & Design-Konzept</li>
+                        <li>Unbegrenzte Location-Besichtigungen</li>
+                        <li>Komplettes Dienstleister-Management</li>
+                        <li>Dekoration & Styling-Konzept</li>
+                        <li>Gästemanagement & RSVPs</li>
+                        <li>Wöchentliche Updates & Meetings</li>
+                    </ul>
+
+                    <a href="index.html#kontakt" class="package-cta">Jetzt anfragen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="pricing-comparison">
+        <div class="container">
+            <h2 class="section-title">Leistungsvergleich</h2>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Leistung</th>
+                            <th>Day-of</th>
+                            <th>Teilplanung</th>
+                            <th>Full-Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Erstgespräch & Bedarfsanalyse</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Betreuung am Hochzeitstag</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Detaillierter Tagesablauf</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Budgetplanung & -kontrolle</td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dienstleister-Empfehlungen</td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Location-Besichtigungen</td>
+                            <td><span class="cross">—</span></td>
+                            <td>Bis zu 3</td>
+                            <td>Unbegrenzt</td>
+                        </tr>
+                        <tr>
+                            <td>E-Mail & WhatsApp Support</td>
+                            <td>Begrenzt</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Regelmäßige Meetings</td>
+                            <td><span class="cross">—</span></td>
+                            <td>Monatlich</td>
+                            <td>Wöchentlich</td>
+                        </tr>
+                        <tr>
+                            <td>Konzeptentwicklung & Design</td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Gästemanagement</td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dekoration & Styling</td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section class="pricing-addons">
+        <div class="container">
+            <h2 class="section-title">Zusatzleistungen</h2>
+            <p class="section-subtitle">Ergänzen Sie Ihr Paket individuell</p>
+
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>Probe-Dinner Organisation</h4>
+                        <p>Planung & Koordination des Rehearsal Dinners</p>
+                    </div>
+                    <div class="addon-price">ab 350€</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>Brunch am Folgetag</h4>
+                        <p>Organisation des After-Wedding-Brunchs</p>
+                    </div>
+                    <div class="addon-price">ab 250€</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>Gäste-Willkommenstüten</h4>
+                        <p>Zusammenstellung & Verpackung von Welcome Bags</p>
+                    </div>
+                    <div class="addon-price">ab 150€</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>Standesamtliche Trauung</h4>
+                        <p>Separate Betreuung der standesamtlichen Feier</p>
+                    </div>
+                    <div class="addon-price">ab 400€</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>Destination Wedding Support</h4>
+                        <p>Zusätzliche Koordination für Hochzeiten außerhalb RLP</p>
+                    </div>
+                    <div class="addon-price">auf Anfrage</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>Zweiter Koordinator</h4>
+                        <p>Zusätzliche Unterstützung am Hochzeitstag</p>
+                    </div>
+                    <div class="addon-price">ab 300€</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="pricing-process">
+        <div class="container">
+            <h2 class="section-title">So starten wir</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Anfrage senden</h4>
+                    <p>Erzählen Sie mir von Ihrer Vision. Ich melde mich innerhalb von 24-48 Stunden bei Ihnen.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Kostenloses Erstgespräch</h4>
+                    <p>Wir lernen uns kennen und besprechen Ihre Wünsche – telefonisch oder per Video-Call.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Individuelles Angebot</h4>
+                    <p>Sie erhalten ein maßgeschneidertes Angebot basierend auf Ihren Bedürfnissen.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Los geht's!</h4>
+                    <p>Nach Vertragsunterzeichnung beginnt die spannende Reise zu Ihrer Traumhochzeit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="pricing-guarantee">
+        <div class="container">
+            <h2>Mein Versprechen an Sie</h2>
+            <p>Ich arbeite nur mit einer begrenzten Anzahl an Paaren pro Jahr, um jedem die volle Aufmerksamkeit zu schenken, die Ihre Hochzeit verdient. Qualität vor Quantität – das ist mein Grundsatz.</p>
+
+            <div class="guarantee-features">
+                <div class="guarantee-item">
+                    <span>💎</span>
+                    <p>Premium-Qualität garantiert</p>
+                </div>
+                <div class="guarantee-item">
+                    <span>🤝</span>
+                    <p>Persönliche 1:1 Betreuung</p>
+                </div>
+                <div class="guarantee-item">
+                    <span>📱</span>
+                    <p>Jederzeit erreichbar</p>
+                </div>
+                <div class="guarantee-item">
+                    <span>❤️</span>
+                    <p>Mit Herzblut dabei</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="pricing-cta">
+        <div class="container">
+            <h2>Bereit für das Erstgespräch?</h2>
+            <p>Lassen Sie uns über Ihre Traumhochzeit sprechen. Das Erstgespräch ist kostenlos und unverbindlich.</p>
+            <a href="index.html#kontakt" class="btn btn-primary">Kostenlos anfragen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>DELILA</h3>
+                <p>Hochzeitsdesign</p>
+                <p class="footer-tagline">Moderne Hochzeitsplanung in Rheinland-Pfalz</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="index.html#leistungen">Leistungen</a></li>
+                    <li><a href="preise.html">Preise</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontakt</h4>
+                <p>Mainz, Rheinland-Pfalz</p>
+                <p>info@delila-hochzeiten.de</p>
+            </div>
+            <div class="footer-social">
+                <h4>Folgen Sie mir</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Pinterest">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DELILA Hochzeitsdesign. Alle Rechte vorbehalten.</p>
+            <div class="footer-legal">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
