@@ -252,12 +252,32 @@ section {
     align-items: center;
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-md);
-    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-white) 50%, #f5f0eb 100%);
     position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(250, 249, 247, 0.92) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(245, 240, 235, 0.9) 100%);
 }
 
 .hero-content {
     max-width: 800px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-subtitle {
@@ -293,6 +313,7 @@ section {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-xs);
+    z-index: 1;
 }
 
 .hero-scroll span {
@@ -421,22 +442,11 @@ section {
     position: relative;
 }
 
-.image-placeholder {
+.about-photo {
+    width: 100%;
     aspect-ratio: 3/4;
-    background: linear-gradient(135deg, var(--color-light) 0%, #e8e4df 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: var(--color-text-light);
-}
-
-.image-placeholder small {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    margin-top: var(--spacing-xs);
+    object-fit: cover;
+    object-position: center top;
 }
 
 .about-content .lead {
@@ -479,6 +489,39 @@ section {
 }
 
 /* ========================================
+   Gallery Strip
+   ======================================== */
+.gallery-strip {
+    padding: 0;
+    overflow: hidden;
+    background: var(--color-primary);
+}
+
+.gallery-strip-inner {
+    display: flex;
+    gap: 4px;
+}
+
+.gallery-strip img {
+    height: 200px;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: var(--transition);
+}
+
+.gallery-strip img:hover {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .gallery-strip img {
+        height: 150px;
+    }
+}
+
+/* ========================================
    Services Section
    ======================================== */
 .services-section {
@@ -493,10 +536,10 @@ section {
 
 .service-card {
     background: var(--color-white);
-    padding: var(--spacing-lg);
     position: relative;
     transition: var(--transition);
     border: 1px solid var(--color-border);
+    overflow: hidden;
 }
 
 .service-card:hover {
@@ -518,6 +561,28 @@ section {
     font-weight: 600;
     padding: 0.25rem 0.75rem;
     letter-spacing: 0.05em;
+    z-index: 2;
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: var(--spacing-md);
 }
 
 .service-icon {
@@ -604,14 +669,35 @@ section {
     min-height: 300px;
 }
 
+.location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.location-card:hover .location-image img {
+    transform: scale(1.05);
+}
+
 .location-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-white);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     padding: 0.5rem 1rem;
+    z-index: 1;
+}
+
+.location-image {
+    position: relative;
+    overflow: hidden;
 }
 
 .location-content {
@@ -686,10 +772,19 @@ section {
 
 .portfolio-image {
     aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
 }
 
 .portfolio-overlay {
@@ -708,6 +803,14 @@ section {
 
 .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
+}
+
+.portfolio-item.wide {
+    grid-column: span 2;
+}
+
+.portfolio-item.wide .portfolio-image {
+    aspect-ratio: 2/1;
 }
 
 .portfolio-overlay span {
@@ -755,6 +858,21 @@ section {
     border-left: 2px solid var(--color-accent);
 }
 
+.testimonial-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+    border: 2px solid var(--color-accent);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .testimonial p {
     font-style: italic;
     margin-bottom: var(--spacing-md);
@@ -779,6 +897,62 @@ section {
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ========================================
+   CTA Section
+   ======================================== */
+.cta-section {
+    position: relative;
+    padding: var(--spacing-xl) 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cta-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.cta-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 44, 44, 0.7);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-white);
+}
+
+.cta-content h2 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-content p {
+    opacity: 0.9;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.125rem;
+}
+
+.btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
 }
 
 /* ========================================
@@ -966,6 +1140,15 @@ textarea {
 .footer-seo {
     font-size: 0.75rem;
     margin-top: var(--spacing-xs);
+}
+
+.footer-credits {
+    font-size: 0.7rem;
+    margin-top: var(--spacing-xs);
+}
+
+.footer-credits a {
+    color: var(--color-accent);
 }
 
 @media (max-width: 768px) {

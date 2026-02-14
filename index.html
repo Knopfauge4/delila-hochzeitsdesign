@@ -17,6 +17,7 @@
     <meta property="og:title" content="DELILA Hochzeitsdesign | Premium Hochzeitsplanung">
     <meta property="og:description" content="Moderne, minimalistische Hochzeitsplanung in Rheinland-Pfalz. Persoenliche Betreuung fuer Ihre Traumhochzeit.">
     <meta property="og:url" content="https://knopfauge4.github.io/delila-hochzeitsdesign/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -36,7 +37,7 @@
             "@type": "State",
             "name": "Rheinland-Pfalz"
         },
-        "priceRange": "€€€",
+        "priceRange": "$$$",
         "serviceType": ["Hochzeitsplanung", "Wedding Planning", "Event Coordination"]
     }
     </script>
@@ -69,8 +70,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Image -->
     <header class="hero" id="home">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80" alt="Elegante Hochzeitstafel mit minimalistischer Dekoration" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
             <p class="hero-subtitle">Hochzeitsplanung in Rheinland-Pfalz</p>
             <h1>Moderne Eleganz fuer Ihren schoensten Tag</h1>
@@ -115,10 +120,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <span>Delila</span>
-                        <small>Ihre Hochzeitsplanerin</small>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Delila - Ihre Hochzeitsplanerin aus Mainz" class="about-photo" loading="lazy">
                 </div>
                 <div class="about-content">
                     <span class="section-label">Ueber mich</span>
@@ -145,6 +147,17 @@
         </div>
     </section>
 
+    <!-- Image Gallery Strip -->
+    <section class="gallery-strip">
+        <div class="gallery-strip-inner">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=80" alt="Brautpaar bei der Trauung" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&q=80" alt="Elegante Hochzeitsdekoration" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&q=80" alt="Brautstrauss mit weissen Rosen" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Hochzeitstorte minimalistisch" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&q=80" alt="Romantische Hochzeitsfeier" loading="lazy">
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services-section" id="services">
         <div class="container">
@@ -158,61 +171,60 @@
                 <!-- Full Service -->
                 <article class="service-card featured">
                     <div class="service-badge">Beliebt</div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=500&q=80" alt="Full-Service Hochzeitsplanung" loading="lazy">
                     </div>
-                    <h3>Full-Service Planung</h3>
-                    <p class="service-description">Die Rundum-sorglos-Loesung. Ich uebernehme die komplette Planung Ihrer Hochzeit von der ersten Idee bis zum letzten Tanz.</p>
-                    <ul class="service-features">
-                        <li>Persoenliches Konzept & Design</li>
-                        <li>Location-Suche & Besichtigungen</li>
-                        <li>Koordination aller Dienstleister</li>
-                        <li>Budget-Management</li>
-                        <li>Komplette Begleitung am Hochzeitstag</li>
-                        <li>Unbegrenzte Beratungstermine</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Anfragen</a>
+                    <div class="service-content">
+                        <h3>Full-Service Planung</h3>
+                        <p class="service-description">Die Rundum-sorglos-Loesung. Ich uebernehme die komplette Planung Ihrer Hochzeit von der ersten Idee bis zum letzten Tanz.</p>
+                        <ul class="service-features">
+                            <li>Persoenliches Konzept & Design</li>
+                            <li>Location-Suche & Besichtigungen</li>
+                            <li>Koordination aller Dienstleister</li>
+                            <li>Budget-Management</li>
+                            <li>Komplette Begleitung am Hochzeitstag</li>
+                            <li>Unbegrenzte Beratungstermine</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Anfragen</a>
+                    </div>
                 </article>
 
                 <!-- Teilplanung -->
                 <article class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=500&q=80" alt="Teilplanung Hochzeit" loading="lazy">
                     </div>
-                    <h3>Teilplanung</h3>
-                    <p class="service-description">Sie haben schon einiges geplant? Ich unterstuetze Sie gezielt bei den Bereichen, die Ihnen noch fehlen.</p>
-                    <ul class="service-features">
-                        <li>Uebernahme einzelner Planungsbereiche</li>
-                        <li>Location oder Dekoration</li>
-                        <li>Dienstleister-Empfehlungen</li>
-                        <li>Design-Beratung</li>
-                        <li>Flexibles Stunden-Kontingent</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Anfragen</a>
+                    <div class="service-content">
+                        <h3>Teilplanung</h3>
+                        <p class="service-description">Sie haben schon einiges geplant? Ich unterstuetze Sie gezielt bei den Bereichen, die Ihnen noch fehlen.</p>
+                        <ul class="service-features">
+                            <li>Uebernahme einzelner Planungsbereiche</li>
+                            <li>Location oder Dekoration</li>
+                            <li>Dienstleister-Empfehlungen</li>
+                            <li>Design-Beratung</li>
+                            <li>Flexibles Stunden-Kontingent</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Anfragen</a>
+                    </div>
                 </article>
 
                 <!-- Day-of Coordination -->
                 <article class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=500&q=80" alt="Day-of Coordination Hochzeit" loading="lazy">
                     </div>
-                    <h3>Day-of Coordination</h3>
-                    <p class="service-description">Sie haben alles selbst geplant? Ich koordiniere am Hochzeitstag, damit Sie entspannt geniessen koennen.</p>
-                    <ul class="service-features">
-                        <li>Vorbesprechung & Timeline</li>
-                        <li>Koordination aller Dienstleister</li>
-                        <li>Ansprechpartnerin fuer alle Gaeste</li>
-                        <li>Problemloesung vor Ort</li>
-                        <li>Bis zu 12 Stunden Betreuung</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Anfragen</a>
+                    <div class="service-content">
+                        <h3>Day-of Coordination</h3>
+                        <p class="service-description">Sie haben alles selbst geplant? Ich koordiniere am Hochzeitstag, damit Sie entspannt geniessen koennen.</p>
+                        <ul class="service-features">
+                            <li>Vorbesprechung & Timeline</li>
+                            <li>Koordination aller Dienstleister</li>
+                            <li>Ansprechpartnerin fuer alle Gaeste</li>
+                            <li>Problemloesung vor Ort</li>
+                            <li>Bis zu 12 Stunden Betreuung</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Anfragen</a>
+                    </div>
                 </article>
             </div>
         </div>
@@ -229,7 +241,8 @@
 
             <div class="locations-grid">
                 <div class="location-card large">
-                    <div class="location-image" style="background: linear-gradient(135deg, #d4a574 0%, #c9a77d 100%);">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80" alt="Historisches Schloss fuer Hochzeiten in der Pfalz" loading="lazy">
                         <span class="location-type">Schloesser</span>
                     </div>
                     <div class="location-content">
@@ -239,7 +252,8 @@
                 </div>
 
                 <div class="location-card">
-                    <div class="location-image" style="background: linear-gradient(135deg, #8fbc8f 0%, #6b8e6b 100%);">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80" alt="Weingut Hochzeit in der Pfalz" loading="lazy">
                         <span class="location-type">Weingueter</span>
                     </div>
                     <div class="location-content">
@@ -249,7 +263,8 @@
                 </div>
 
                 <div class="location-card">
-                    <div class="location-image" style="background: linear-gradient(135deg, #87ceeb 0%, #6bb3d9 100%);">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Moderne Hochzeitslocation" loading="lazy">
                         <span class="location-type">Modern</span>
                     </div>
                     <div class="location-content">
@@ -286,7 +301,8 @@
 
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(45deg, #f5f5f5 0%, #e8e8e8 100%);">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Schloss-Hochzeit in der Pfalz" loading="lazy">
                         <div class="portfolio-overlay">
                             <span>Schloss-Hochzeit</span>
                             <small>Pfalz | 80 Gaeste</small>
@@ -294,7 +310,8 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(45deg, #faf8f5 0%, #f0ebe3 100%);">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&q=80" alt="Weingut Hochzeit Rheinhessen" loading="lazy">
                         <div class="portfolio-overlay">
                             <span>Weingut-Romantik</span>
                             <small>Rheinhessen | 120 Gaeste</small>
@@ -302,7 +319,8 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(45deg, #f8f8f8 0%, #efefef 100%);">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=600&q=80" alt="Minimalistische moderne Hochzeit Mainz" loading="lazy">
                         <div class="portfolio-overlay">
                             <span>Minimalistisch Modern</span>
                             <small>Mainz | 60 Gaeste</small>
@@ -310,10 +328,29 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(45deg, #f5f0eb 0%, #e8e0d5 100%);">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Elegante Intimhochzeit an der Mosel" loading="lazy">
                         <div class="portfolio-overlay">
                             <span>Elegante Intimhochzeit</span>
                             <small>Mosel | 40 Gaeste</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item wide">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1200&q=80" alt="Outdoor Hochzeit in Rheinland-Pfalz" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span>Gartenhochzeit im Sommer</span>
+                            <small>Rheingau | 100 Gaeste</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Luxus Hochzeit Details" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span>Luxus in den Details</span>
+                            <small>Wiesbaden | 70 Gaeste</small>
                         </div>
                     </div>
                 </div>
@@ -321,7 +358,7 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials with Images -->
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header">
@@ -331,6 +368,9 @@
 
             <div class="testimonials-grid">
                 <blockquote class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Julia" loading="lazy">
+                    </div>
                     <p>"Delila hat unsere Vision perfekt umgesetzt. Ihre ruhige Art und ihr Auge fuer Details haben unseren Tag unvergesslich gemacht. Absolut empfehlenswert!"</p>
                     <footer>
                         <strong>Julia & Maximilian</strong>
@@ -339,6 +379,9 @@
                 </blockquote>
 
                 <blockquote class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Sarah" loading="lazy">
+                    </div>
                     <p>"Wir wollten eine moderne, minimalistische Hochzeit - und genau das haben wir bekommen. Delila versteht es, Wuensche in Realitaet zu verwandeln."</p>
                     <footer>
                         <strong>Sarah & Thomas</strong>
@@ -347,12 +390,30 @@
                 </blockquote>
 
                 <blockquote class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&q=80" alt="Lisa" loading="lazy">
+                    </div>
                     <p>"Die Location-Tipps waren Gold wert! Ohne Delila haetten wir unser Traumweingut nie gefunden. Danke fuer die wundervolle Betreuung!"</p>
                     <footer>
                         <strong>Lisa & Daniel</strong>
                         <span>Hochzeit an der Mosel</span>
                     </footer>
                 </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Image -->
+    <section class="cta-section">
+        <div class="cta-background">
+            <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=1920&q=80" alt="Romantische Hochzeit bei Sonnenuntergang" loading="lazy">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Bereit fuer Ihre Traumhochzeit?</h2>
+                <p>Lassen Sie uns gemeinsam den schoensten Tag Ihres Lebens planen. Das Erstgespraech ist kostenlos und unverbindlich.</p>
+                <a href="#contact" class="btn btn-primary btn-large">Jetzt Kontakt aufnehmen</a>
             </div>
         </div>
     </section>
@@ -486,6 +547,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 DELILA Hochzeitsdesign. Alle Rechte vorbehalten.</p>
                 <p class="footer-seo">Hochzeitsplaner Mainz | Hochzeitsplanung Rheinland-Pfalz | Wedding Planner Pfalz</p>
+                <p class="footer-credits">Bilder: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> (kostenlos fuer kommerzielle Nutzung)</p>
             </div>
         </div>
     </footer>
